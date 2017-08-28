@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myDemoApp">
+   <head>
+      <meta charset="utf-8">
+      <title>Aviota</title>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="app/css/app.css" >
+      <link rel="stylesheet" href="app/css/bootstrap.min.css" >
+      <!-- Theme style -->
+      <link rel="stylesheet" href="app/dist/css/AdminLTE.min.css">
+      <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+      <link rel="stylesheet" href="app/dist/css/skins/_all-skins.min.css">
+   </head>
+   <body class="hold-transition skin-blue sidebar-mini">
+      <div class="wrapper">
+         <header class="main-header">
+            <!-- Logo -->
+            <a href="" class="logo">
+               <!-- mini logo for sidebar mini 50x50 pixels -->
+               <span class="logo-mini"><b>Admin</span>
+               <!-- logo for regular state and mobile devices -->
+               <span class="logo-lg"><b>Admin</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+               <!-- Header Navbar -->
+            </nav>
+         </header>
+         <!-- Left side column. contains the logo and sidebar -->
+         <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+               <!-- sidebar menu: : style can be found in sidebar.less -->
+               <ul class="sidebar-menu" data-widget="tree">
+                  <li class="header">MAIN NAVIGATION</li>
+                  <li>
+                     <a ui-sref="addEmployee">
+                     <i class="fa fa-th"></i> <span>Add Employee</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a ui-sref="addDevice">
+                     <i class="fa fa-th"></i> <span>Add Device</span>
+                     </a>
+                  </li>
+				   <li>
+                     <a ui-sref="addDeviceToEmployee">
+                     <i class="fa fa-th"></i> <span>Add Device to employee</span>
+                     </a>
+                  </li>
+               </ul>
+            </section>
+            <!-- /.sidebar -->
+         </aside>
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+            <!-- Main content -->
+            <section class="content">
+               <div class="row">
+                  <!-- right column -->
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                     <div data-ui-view="" data-autoscroll="false" ></div>
+                  </div>
+                  <div class="col-md-2"></div>
+                  <!--/.col (right) -->
+               </div>
+               <!-- /.row -->
+            </section>
+            <!-- /.content -->
+         </div>
+         <!-- /.content-wrapper -->
+         <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+               <b>Version</b> 1.0
+            </div>
+         </footer>
+      </div>
+      </div>
+      <!-- ./wrapper -->
+      <!------------------------>
+      <script src="vendor/jquery/jquery.js"></script>
+      <script src="vendor/bootstrap/bootstrap.min.js"></script>
+      <script src="vendor/angular/angular.min.js"></script>
+      <script src="vendor/angular-ui-router/angular-ui-router.min.js"></script>
+      <script src="app/src/app.js"></script>
+      <!-- AdminLTE App -->
+      <script src="app/dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="app/dist/js/demo.js"></script>
+      <script src="app/src/module/module.main.js"></script>
+      <script src="app/src/module/home/home.config.js"></script>
+      <script src="app/src/module/home/home.controller.js"></script>	  
+	  <script src="app/src/module/addEmployee/addEmployee.config.js"></script>
+      <script src="app/src/module/addEmployee/addEmployee.controller.js"></script>	  
+	  <script src="app/src/module/addDevice/addDevice.config.js"></script>
+      <script src="app/src/module/addDevice/addDevice.controller.js"></script>  
+	  <script src="app/src/module/addDeviceToEmployee/addDeviceToEmployee.config.js"></script>
+      <script src="app/src/module/addDeviceToEmployee/addDeviceToEmployee.controller.js"></script>
+   </body>
+</html>

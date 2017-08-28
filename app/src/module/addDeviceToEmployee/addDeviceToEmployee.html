@@ -1,0 +1,37 @@
+<!-- Horizontal Form -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Add Device To Employee</h3>
+            </div>
+            
+			
+			<table class="table">
+				<thead>
+					<tr style="background: #eee;"><th>Name</th><th>Employee Name</th><th></th></tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="obj in devices">
+						<td>
+							<input type="text" class="form-control" ng-model="obj.name" ng-if="obj.editing"/>
+							<span ng-if="!obj.editing">{{obj.name}}</span>
+						</td>	
+						<td>
+							<select ng-model="obj.employeeName" ng-if="obj.editing">
+								<option ng-repeat="employee in employees" value="{{employee.name}}">{{employee.name}}</option>
+							</select>
+							<span ng-if="!obj.editing">{{obj.employeeName}}</span>
+						</td>
+						<td>
+							<button class="btn btn-xs btn-primary" ng-click="editor.edit(obj)" ng-if="!obj.editing">Edit</button>
+							<span ng-if="obj.editing">
+								<button type="submit" class="btn btn-xs btn-success" ng-click="editor.save()">Save</button>
+								<button type="button" class="btn btn-xs btn-default" ng-click="editor.cancel()">Cancel</button>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+<pre>{{devices|json}}</pre>
+			
+			
